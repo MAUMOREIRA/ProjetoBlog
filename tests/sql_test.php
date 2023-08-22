@@ -3,15 +3,15 @@
 
     $id = 1;
     $nome = 'maumau';
-    $email = 'maumau@gmail.com';
-    $senha = 'maumau';
-    $dados = [  'nome' => $nome,
-                'email' => $email,
-                'senha' => $senha];
-
+    $email = 'mamau@gmail.com';
+    $senha = 'maumau123456';
+    $dados = ['nome' => $nome,
+              'email' => $email,
+              'senha' => $senha];
     $entidade = 'usuario';
     $criterio = [['id', '=', $id]];
     $campos = ['id', 'nome', 'email'];
+
     print_r($dados);
     echo '<br>';
     print_r($campos);
@@ -19,19 +19,20 @@
     print_r($criterio);
     echo '<br>';
 
-    //teste INSERT
+    // Teste geração INSERT
     $instrucao = insert($entidade, $dados);
     echo $instrucao.'<BR>';
 
-    //teste UPDATE
+    // Teste geração UPDATE
     $instrucao = update($entidade, $dados, $criterio);
     echo $instrucao.'<BR>';
 
-    //teste SELECT 
-    $instrucao = select($entidade, $dados, $criterio);
+    // Teste geração SELECT
+    $instrucao = select($entidade, $campos, $criterio);
     echo $instrucao.'<BR>';
 
-    //teste DELETE
+    // Teste geração DELETE
     $instrucao = delete($entidade, $criterio);
     echo $instrucao.'<BR>';
+
 ?>

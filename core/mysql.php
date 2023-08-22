@@ -12,13 +12,13 @@ function insere (string $entidade, array $dados) : bool
     }
 
     $instrucao = insert($entidade, $coringa); //vai inserir os coringas
-    echo $instrucao;
+    
     $conexao = conecta();
 
     $stmt = mysqli_prepare ($conexao, $instrucao);
 
     eval('mysqli_stmt_bind_param($stmt, \'' . implode('',$tipo) . '\',$'
-    . implode(', $', array_keys($dados)) . ');');
+    . implode(', $', array_keys($dados)) . '); ');
 
     mysqli_stmt_execute($stmt);
     
@@ -62,7 +62,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
     }
 
     $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
-    echo $instrucao;
+
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);
@@ -73,7 +73,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
         $comando .= ', $' . implode(', $', array_keys($dados));
         $comando .= ', $' . implode(', $', $campos_criterio);
         $comando .= ');';
-        echo $comando;
+
         eval($comando);
     }
 
@@ -163,7 +163,7 @@ string $ordem = null) : array
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-    
+     echo($instrucao);
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);
