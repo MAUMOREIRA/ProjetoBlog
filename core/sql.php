@@ -11,6 +11,7 @@ function insert(string $entidade, array $dados) : string
     $instrucao .= " VALUES ({$valores})";
 
     return $instrucao;
+    
 }
 
 function update(string $entidade, array $dados, array $criterio = []) : string

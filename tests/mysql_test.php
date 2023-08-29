@@ -14,6 +14,7 @@ function insert_teste($nome, $email, $senha): void{
 
     $dados = ['nome' => $nome, 'email' => $email, 'senha' => $senha]; 
     insere ('usuario', $dados);
+    
 }
 
 //Teste select banco de dados
