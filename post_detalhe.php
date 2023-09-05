@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--Código de detalhamento de um post-->
+<!DOCTYPE html> 
 <?php
     require_once 'includes/funcoes.php';
     require_once 'core/conexao_mysql.php';
