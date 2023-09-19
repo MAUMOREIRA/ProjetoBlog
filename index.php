@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col-md-12">
                     <!-- Topo //-->
                     <?php
@@ -16,13 +16,13 @@
                 </div>
             </div>
             <div class="row" style="min-height: 500px;">
-                <div class="col-md-12">
+                <div class="col-md-11">
                     <!--Menu //-->
                     <?php
                         include 'includes/menu.php';
                     ?>
             </div>
-            <div class="col-md-10" style="padding-top: 50px;">
+            <div class="col-md-12" style="padding-top: 50px;">
                 <!--Conteúdo //-->
                 <h2>Página Inicial</h2>
                 <?php
