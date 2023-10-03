@@ -14,6 +14,7 @@
             </div>
             <div class="row" style="min-height: 500px;">
                 <div class="col-md-12">
+                    <?php include 'includes/topo.php'; ?>
                     <?php include 'includes/menu.php'; ?>
                 </div>
                 <div class="col-md-10" style="padding-top: 50px;">
